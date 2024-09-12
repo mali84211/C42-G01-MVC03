@@ -1,3 +1,5 @@
+using C42_G01_MVC03.Models;
+
 namespace C42_G01_MVC03
 {
     public class Program
@@ -8,6 +10,8 @@ namespace C42_G01_MVC03
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 
             var app = builder.Build();
 
